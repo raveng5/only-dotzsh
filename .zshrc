@@ -21,22 +21,6 @@ alias zed="/home/ig/.local/zed.app/bin/zed"
 alias rezsh="source ~/.zshrc"
 alias resway="swaymsg reload"
 
-# Force upload the entire dotfiles directory exactly as it is right now
-gitup() {
-    # Check if we are in the dotfiles directory, if not, jump there
-    cd /home/ig/sec-dotfiles || return
-
-    echo "Preparing"
-    git add -A
-
-    echo "Creating fresh snapshot"
-    git commit -m "Full upload: $(date '+%Y-%m-%d %H:%M:%S')" --allow-empty
-
-    echo "Force pushing the entire directory..."
-    git push origin $(git branch --show-current) --force
-
-    echo "done"
-}
 #just u know do the thing
 gowork(){
     cd /home/ig/auto-pro || return
