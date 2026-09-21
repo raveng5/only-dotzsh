@@ -37,6 +37,7 @@ gitup() {
 
     echo "done"
 }
+#just u know do the thing
 gowork(){
     cd /home/ig/auto-pro || return
     python main.py
